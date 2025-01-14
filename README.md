@@ -67,8 +67,8 @@ Access JupyterLab at http://localhost:8888/lab.
 ### Custom Packages
 
 To add additional Python libraries or dependencies:
-- Add dependencies inside flake.nix
-- Rebuild the environment with:
+1. Add dependencies inside flake.nix
+2. Rebuild the environment with:
 
 ```bash
 nix develop
