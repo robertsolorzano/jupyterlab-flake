@@ -1,0 +1,9 @@
+# Nix-specific files
+*.lock
+result/
+
+# Jupyter notebook files
+.ipynb_checkpoints/
+
+# IDE configuration
+.vscode/
