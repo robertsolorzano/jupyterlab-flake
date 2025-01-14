@@ -15,27 +15,46 @@ A Nix Flake providing a reproducible, portable JupyterLab environment, pre-confi
 
 ## Quick Start
 
-### Direct Execution or run locally
+### Option 1: Temporary Remote Execution
 
 Run JupyterLab directly without cloning the repository:
 
 ```bash
-nix run github:robertsolorzano/jupyterlab-flake  # Temporary execution
+nix run github:robertsolorzano/jupyterlab-flake
 ```
-Or clone the repository and run locally:
+This will temporarily download the Flake, run JupyterLab, and clean up afterward. No files will be left behind.
+
+### Option 2: Local Execution
+
+Clone the repository and run JupyterLab locally:
+
 ```bash
-nix run  # Local execution
+git clone https://github.com/robertsolorzano/jupyterlab-flake.git  
+cd jupyterlab-flake  
+nix run  
 ```
+
+This approach lets you modify or inspect the Flake files directly.
+
 ## Development
 
-### Enter Development Environment
+### Option 1: Temporary Remote Development Environment
 
-To modify or extend the environment:
+If you don’t want to clone the repository, you can still enter a development environment with all dependencies loaded:
+
 ```bash
-nix develop github:robertsolorzano/jupyterlabs-flake  # Remote environment
-nix develop  # Local development environment
+nix develop github:robertsolorzano/jupyterlab-flake
 ```
-This opens a shell with all dependencies for development.
+
+### Option 2: Local Development Environment
+
+If you’ve cloned the repository, you can enter the development environment locally:
+
+```bash
+nix develop  
+```
+
+Both options provide a shell with all required dependencies.
 
 ### Start JupyterLab
 
@@ -47,4 +66,10 @@ Access JupyterLab at http://localhost:8888/lab.
 
 ### Custom Packages
 
-To add additional packages, modify the flake.nix file
+To add additional Python libraries or dependencies:
+	1.	Add dependencies inside flake.nix
+    2.  Rebuild the environment with:
+
+```bash
+nix develop
+```
