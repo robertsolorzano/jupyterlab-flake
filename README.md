@@ -1,35 +1,30 @@
 # JupyterLab Flake
-A Nix Flake providing a reproducible, portable JupyterLab environment pre-configured with Python and essential libraries.
+A Nix Flake providing a reproducible, portable JupyterLab environment, pre-configured with Python and essential libraries.
 
 ## Features
 
-- Reproducible development environment using Nix Flakes
-- Portable across different systems
+- Reproducible & portable development environment via Nix Flakes
 - Zero-configuration setup
-- Pre-configured JupyterLab installation
-- Essential starter Python libraries included
+- Pre-configured JupyterLab
+- Essential Python libraries
 
 ## Prerequisites
 
-- Either Nix package manager or NixOs with Flakes enabled
-- x86_64-linux (will provide more OS support soon)
+- Nix package manager or NixOS with Flakes enabled
+- x86_64-linux architecture (support for other OSes coming soon)
 
 ## Quick Start
 
-### Option 1: Direct Execution
+### Direct Execution or run locally
 
 Run JupyterLab directly without cloning the repository:
 
 ```bash
-nix run github:robertsolorzano/jupyterlab-flake
+nix run github:robertsolorzano/jupyterlab-flake  # Temporary execution
 ```
-
-### Option 2: Clone and Run locally
-
+Or clone the repository and run locally:
 ```bash
-git clone https://github.com/robertsolorzano/jupyterlab-flake.git
-cd jupyterlab-flake
-nix run
+nix run  # Local execution
 ```
 ## Development
 
@@ -37,18 +32,18 @@ nix run
 
 To modify or extend the environment:
 ```bash
-nix develop github:robertsolorzano/jupyterlabs-flake #temp
-nix develop #local
+nix develop github:robertsolorzano/jupyterlabs-flake  # Remote environment
+nix develop  # Local development environment
 ```
-This provides a shell with all dependencies available for development.
+This opens a shell with all dependencies for development.
 
-### Start JupyterLab Manually
+### Start JupyterLab
 
-Once in the development environment:
+Once inside the development environment, run:
 ```bash
 jupyter-lab
 ```
-JupyterLab will be available at http://localhost:8888/lab
+Access JupyterLab at http://localhost:8888/lab.
 
 ### Custom Packages
 

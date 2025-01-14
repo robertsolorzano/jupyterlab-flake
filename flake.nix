@@ -29,7 +29,7 @@
         echo "                     jupyter-lab"
         echo "---------------------------------------------------------"
         echo "     Access JupyterLab at: http://localhost:8888/lab"
-        echo "     Use the browser to shut down the server cleanly"
+        echo "         Use the browser to shut down the server"
         echo "========================================================="
       '';
 
