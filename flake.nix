@@ -1,5 +1,5 @@
 {
-  description = "A portable environment for running JupyterLab, ideal for data analysis and research.";
+  description = "A portable environment for running JupyterLab.";
 
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
