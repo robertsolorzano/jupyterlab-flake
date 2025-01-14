@@ -11,7 +11,7 @@ A Nix Flake providing a reproducible, portable JupyterLab environment, pre-confi
 ## Prerequisites
 
 - Nix package manager or NixOS with Flakes enabled
-- x86_64-linux architecture (support for other OSes coming soon)
+- x86_64-linux architecture (support for additional operating systems coming soon)
 
 ## Quick Start
 
